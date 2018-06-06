@@ -9,6 +9,7 @@ namespace Bank
     enum BankAccountType
     {
         Savings,
-        Checking
+        SuperSuperSavings,
+        Checking,
     }
 }

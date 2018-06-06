@@ -12,7 +12,8 @@ namespace Bank
         {
             //Refactoring
 
-            Contact contacto = new Contact("0012222222", "Hernando Brenes", "hbrenes@gmail.com", "Frank Felix Miranda 32", "809-729-2899", "123456789", 100);
+            Contact contacto;
+            contacto = new Contact("0012222222", "Hernando Brenes", "hbrenes@gmail.com", "Frank Felix Miranda 32", "809-729-2899", "123456789", 100);
             PrintBalance(contacto);
             //deposit 500
             contacto.Account.Deposit(500);
@@ -32,6 +33,21 @@ namespace Bank
             result = contacto.Account.Withdrawl(400);
 
             PrintBalance(contacto);
+
+            switch (contacto.Account.Type)
+            {
+                case BankAccountType.Savings:
+                case BankAccountType.SuperSuperSavings:
+                    Console.WriteLine("This is a savings account.");
+         
+                
+                    //Console.WriteLine("This is a super super savings account.");
+                    break;
+                case BankAccountType.Checking:
+                    break;
+                default:
+                    break;
+            }
 
             Console.Read();
         }
