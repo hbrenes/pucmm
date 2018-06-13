@@ -12,6 +12,11 @@ namespace Bank
         {
             
 
+
+
+
+
+
             //string[] arr = new string[3]; //{5, 6, 8,10,50 };
 
             //arr[0] = "Hola";
@@ -37,7 +42,7 @@ namespace Bank
 
             //Refactoring
 
-     
+     /*
             var contacto = new Contact("0012222222", "Hernando Brenes", "hbrenes@gmail.com", "Frank Felix Miranda 32", "809-729-2899", "123456789", 100);
             PrintBalance(contacto);
 
@@ -86,6 +91,7 @@ namespace Bank
             //        break;
             //}
 
+        */
             Console.Read();
         }
 
