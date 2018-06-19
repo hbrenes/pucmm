@@ -20,7 +20,7 @@ namespace ExceptionsApp
 
                 if (name.ToLower() == "fuck")
                 {
-                    throw new NoBadWordException("No es un nombre valido.");
+                    throw new NoBadWordException("No es un nombre valido.", name);
                 }
 
                 Console.WriteLine("Escribe un numero: ");
@@ -37,7 +37,7 @@ namespace ExceptionsApp
             }
             catch (NoBadWordException ex)
             {
-                Console.WriteLine("Pana, no se puede decir malas palabras");
+                Console.WriteLine($"Pana, no se puede decir malas palabras: charcount: {ex.charCount}");
             }
             catch (DivideByZeroException ex)
             {

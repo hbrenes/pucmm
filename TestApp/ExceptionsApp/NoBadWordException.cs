@@ -9,12 +9,14 @@ namespace ExceptionsApp
 {
     class NoBadWordException : ApplicationException
     {
+        public int charCount { get; set; }
         public NoBadWordException()
         {
         }
 
-        public NoBadWordException(string message) : base(message)
+        public NoBadWordException(string message, string word) : base(message)
         {
+            this.charCount = word.Length;
         }
 
         public NoBadWordException(string message, Exception innerException) : base(message, innerException)
