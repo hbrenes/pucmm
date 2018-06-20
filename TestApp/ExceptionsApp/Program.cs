@@ -14,6 +14,27 @@ namespace ExceptionsApp
 
             try
             {
+                string nombre = "Hernando";
+
+                Console.WriteLine(nombre[nombre.Length-1]);
+                Console.WriteLine(nombre.Substring(nombre.Length - 1, 1));
+
+                string nameValue = "Hernando:Brenes";
+
+
+
+                var parts = nameValue.Split(':');
+
+                string dirtyString = "Hernando - ( Brenes(";
+
+                var cleanString = dirtyString.Replace("(", string.Empty).Replace("-", string.Empty);
+
+                int val = 560;
+
+                Console.WriteLine(val.ToString().PadLeft(6, '0'));
+
+                Console.WriteLine(nombre.Substring(0, 3));
+
                 Console.Write("Escribe tu nombre: ");
 
                 string name = Console.ReadLine();
